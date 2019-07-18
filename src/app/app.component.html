@@ -1,0 +1,76 @@
+<!-- <script src="https://unpkg.com/mathjs/dist/math.min.js"></script> -->
+<form name="sci-calc">
+  <table class="calculator" cellspacing="0" cellpadding="1">
+    <tr>
+      <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25" [(ngModel)]="exp">  </td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btnTop" name="btnTop" value="C"   (click)="calcC()"></td>
+      <td><input type="button" class="btnTop" name="btnTop" value="<--" #plus (click)="calc(plus.value)"></td>
+      <td><input type="button" class="btnTop" name="btnTop"  value="=" (click)="eval(exp)"></td>
+      <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" #pi (click)="calc(pi.value)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value="%" #percent (click)="calc(percent.value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btnNum" name="seven"  [(ngModel)]="seven" (click)="calc(seven)"></td>
+      <td><input type="button" class="btnNum" name="eight" [(ngModel)]="eight" (click)="calc(eight)"></td>
+      <td><input type="button" class="btnNum" name="nine" [(ngModel)]="nine" (click)="calc(nine)"></td>
+      <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" #pow (click)="calc(pow.value)"></td>
+      <td><input type="button" class="btnMath" name="divide" value="/" #divide (click)="calc(divide.value)"></td>
+      </tr>
+    <tr>
+      <td><input type="button" class="btnNum" name="four"  [(ngModel)]="four" (click)="calc(four)"></td>
+      <td><input type="button" class="btnNum" name="five"  [(ngModel)]="five"  (click)="calc(five)"></td>
+      <td><input type="button" class="btnNum" name="six" [(ngModel)]="six"  (click)="calc(six)"></td>
+      <td><input type="button" class="btnOpps" name="btnOpps" value="log" (click)="log(exp)"></td>
+      <td><input type="button" class="btnMath" name="multiply"  value="*" #multiply (click)="calc(multiply.value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btnNum" [(ngModel)]="one" name="one"  (click)="calc(one)"></td>
+      <td><input type="button" class="btnNum" name="two"  [(ngModel)]="two"  (click)="calc(two)"></td>
+      <td><input type="button" class="btnNum" name="three"  [(ngModel)]="three" (click)="calc(three)"></td>
+      <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;"  (click)="sqrt(exp)"></td>
+      <td><input type="button" class="btnMath" name="minus" value="-" #minus (click)="calc(minus.value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btnMath" name="btnMath" value="&#177;" #plus (click)="calc(plus.value)" ></td>
+      <td><input type="button" class="btnNum" name="zero"  [(ngModel)]="zero" (click)="calc(zero)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value="&#46;" #deci (click)="calc(deci.value)"></td>
+      <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" #squ (click)="calc(squ.value)"></td>
+      <td><input type="button" class="btnMath" name="plus" value="+" #plus (click)="calc(plus.value)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" class="btnMath" name="btnMath" value="(" #open (click)="calc(open.value)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value=")" #close (click)="calc(close.value)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value="cos"   (click)="cos(exp)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value="sin"   (click)="sin(exp)"></td>
+      <td><input type="button" class="btnMath" name="btnMath" value="tan"  (click)="tan(exp)"></td>
+    </tr>
+    </table>
+</form>
+<!-- 
+<script>
+
+  console.log(math.round(math.e, 3));            // 2.718
+  console.log(math.atan2(3, -3) / math.pi);      // 0.75
+  print(math.log(10000, 10));              // 4
+  print(math.sqrt(-4));                    // 2i
+  print(math.pow([[-1, 2], [3, 1]], 2));   // [[7, 0], [0, 7]]
+  print(math.derivative('x^2 + x', 'x'));  // 2 * x + 1
+  
+  // expressions
+  print(math.eval('12 / (2.3 + 0.7)'));    // 4
+  print(math.eval('12.7 cm to inch'));     // 5 inch
+  print(math.eval('9 / 3 + 2i'));          // 3 + 2i
+  print(math.eval('det([-1, 2; 3, 1])'));  // -7
+  
+  // chaining
+  var a = math.chain(3)
+      .add(4)
+      .multiply(2)
+      .done();
+  print(a); // 14
+  
+
+</script> -->
+<router-outlet></router-outlet>
